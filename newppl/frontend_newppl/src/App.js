@@ -52,7 +52,7 @@ class App extends Component {
 
         return (
             <div>
-            <h1>TESTING A</h1>
+            <h1>TESTING Github</h1>
             <h2>Factor 2: {this.state.textstore}</h2>
             <h2>Factor 3: {this.state.arraystore.eventphoto}</h2>
             <img src = {this.state.arraystore.eventphoto}/>
