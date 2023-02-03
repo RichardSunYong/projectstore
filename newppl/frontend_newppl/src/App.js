@@ -54,7 +54,7 @@ class App extends Component {
             <div>
             <h1>TESTING A</h1>
             <h2>Factor 2: {this.state.textstore}</h2>
-            <h2>Factor 2: {this.state.arraystore.eventphoto}</h2>
+            <h2>Factor 3: {this.state.arraystore.eventphoto}</h2>
             <img src = {this.state.arraystore.eventphoto}/>
             <h2>Factor 4: {JSON.stringify(this.state.arraystore)}</h2>
             </div>
