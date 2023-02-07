@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'newppl',
     'city',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -159,7 +160,7 @@ STATICFILES_DIRS = [
     REACT_ROUTE_JESSYPORTFOLIO / "build/static",
 ]
 
-# STATIC_ROOT = "/home/RichardSunYong/mysite/static"
+STATIC_ROOT = "/home/RichardSunYong/mysite/static"
 
 MEDIA_URL = "media/"
 
@@ -169,3 +170,9 @@ MEDIA_ROOT = "/home/RichardSunYong/mysite/media"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+TINYMCE_DEFAULT_CONFIG = {
+    "height": 1000,
+    "plugins": "image, table, media", #plugins
+}
+

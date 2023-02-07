@@ -10,14 +10,23 @@ axios.defaults.xsrfCookieName = "csrftoken";
 
 class App extends Component {
 
+
+
+//// Jessy Put Values Here ///
     constructor (props){
         super (props);
         this.state={
             arraystore : [],
             textstore : 'default item, did not import from django',
+            htmlstore: 'lorem <b>ipsum</b>',
             loading: true
         };
     }
+
+//////////////////////////////////////////////////
+
+
+///////////Richard Handles API Call Here/////////////
 
     componentDidMount() {
         this.getrespond();
@@ -28,10 +37,14 @@ class App extends Component {
         .then(response => {
             this.setState({arraystore: response.data}, this.setState({loading: false}));
             this.setState({textstore: response.data.title});
+            this.setState({htmlstore: response.data.content})
         })
         .catch(err => console.log (err));
         return "complete!";
     }
+
+
+/////////////////////////////////////////////////////
 
 
     render(){
@@ -57,6 +70,9 @@ class App extends Component {
             <h2>Factor 3: {this.state.arraystore.eventphoto}</h2>
             <img src = {this.state.arraystore.eventphoto}/>
             <h2>Factor 4: {JSON.stringify(this.state.arraystore)}</h2>
+
+                <div dangerouslySetInnerHTML= {{__html: this.state.htmlstore}}/>
+
             </div>
             );
 

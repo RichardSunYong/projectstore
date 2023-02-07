@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 
 class Event(models.Model):
@@ -13,6 +14,7 @@ class Event(models.Model):
     description = models.TextField(default = 'default description')
     minpax = models.IntegerField(default = 2)
     maxpax = models.IntegerField(default = 8)
+    content = HTMLField(default = '')
 
     def __str__(self):
         return self.title
