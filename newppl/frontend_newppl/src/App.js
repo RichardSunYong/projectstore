@@ -5,6 +5,12 @@ import Themeswitcher from './Themeswitcher'
 import React, { Component } from "react";
 import axios from 'axios';
 
+
+///React Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import BasicExample from './bootstrapcomponent'
+
+//////////////////////////////////////////////////
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
 axios.defaults.xsrfCookieName = "csrftoken";
 
@@ -54,10 +60,12 @@ class App extends Component {
             return (
                 <div>
 
-                <h1>LOADING!</h1>
+                <h1>LOADING! - jassi was here</h1>
+
+                <button type="button" className="btn btn-primary">Primary</button>
+                <BasicExample />
 
                 </div>
-
                 );
 
 
